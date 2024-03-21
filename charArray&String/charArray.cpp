@@ -1,3 +1,5 @@
+// cannot chnage the size static in nature
+
 #include <iostream>
 #include <string.h>
 #include <algorithm>
@@ -73,6 +75,25 @@ void replaceAt(char ch[])
    // T.C.=> O(l) l is length of string
 }
 
+bool isPalindrom(char ch[],int n){
+   //   n -> length of string
+     int i=0;
+     int j=n-1;
+
+     while(i<=j){
+      if(ch[i] == ch[j]){
+         ++i;
+         --j;
+        }
+        else{
+         // not equal
+           return false;
+        }
+     }
+
+     return true;
+}
+
 int main()
 {
    char ch[100];
@@ -83,8 +104,20 @@ int main()
 
    int len = lengthOfString(ch, 100);
 
-   replaceAt(ch);
-   cout << ch << endl;
+   // replaceAt(ch);
+   // cout << ch << endl;
+    
+    bool checkPalindrom =  isPalindrom(ch,len);
+
+       if(checkPalindrom){
+         cout<<"True this is a palindrom"<<endl;
+       }else{
+         cout<<"False this is not a palindrom"<<endl;
+       }
+
+
+
+
 
    // cout<<len<<endl;
 

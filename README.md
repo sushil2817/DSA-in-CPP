@@ -3,3 +3,7 @@
 
 - Trying to become a Very Good Coder
 
+# ignore all .exe and .bin files
+ .exe 
+ .bin
+ 
