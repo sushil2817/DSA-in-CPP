@@ -1,3 +1,5 @@
+// search in infinite array (unbounded array)
+// O(logi) is the position of the target element in the array
 #include<iostream>
 using namespace std;
 
