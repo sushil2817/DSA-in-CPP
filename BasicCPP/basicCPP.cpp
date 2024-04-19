@@ -13,6 +13,15 @@ int countSetBit(int n){
     }
     return count; 
 }
+// print all digit of an interger
+void printDigit(int num){
+    int digit ;
+    while(num>0){
+        digit = num%10;
+        num = num/10;
+        cout<<digit<<" ";
+    }
+}
 
 // with bitwise and 
 int setBits(int n){
@@ -33,10 +42,11 @@ int main(){
        int n ;
        cin>>n;
        int setBitCount = countSetBit(n);
+       printDigit(n);
 
     //    cout<<setBitCount<<endl;
 
-    cout<<setBits(n);
+    // cout<<setBits(n);
     
     
     return 0;
