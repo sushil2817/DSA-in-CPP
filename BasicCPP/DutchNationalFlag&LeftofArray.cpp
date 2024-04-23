@@ -4,7 +4,8 @@
 
 using namespace std;
 
-
+// T.C => O(n)
+// T.C. => O(1)
 void movleAllNegToLeft(int arr[], int n){
   //Dutch nation flag algo(two pointer )
       int l=0, h=n-1;
