@@ -13,9 +13,10 @@ int countSetBit(int n)
         {
             count++;
         }
+        cout<<bit<<endl;
         n = n / 2;
     }
-    return count;
+    // return count;
 }
 // print all digit of an interger
 void printDigit(int num)
@@ -74,7 +75,7 @@ int bruteForceM2PrefixSum(vector<int>& nums){
         lsum[i] = lsum[i-1]+nums[i-1];
     }
     // cal rsum array
-    for( int i = nums.size()-2;i>=0;i--){
+    for( int i = nums.size()- 2;i>=0;i--){
         rsum[i] = rsum[i+1]+nums[i+1]; 
     }
     // check krte hai
@@ -97,22 +98,35 @@ int main()
     arr.push_back(5);
     arr.push_back(6);
 
-    for (int i = 0; i < arr.size(); i++)
-    {
-        cout << arr[i] << " ";
-    }
+    // for (int i = 0; i < arr.size(); i++)
+    // {
+    //     cout << arr[i] << " ";
+    // }
 
-    cout << endl
-         << "ans is : =  ";
-    cout << bruteForceM2PrefixSum(arr);
+    // cout << endl
+    //      << "ans is : =  ";
+    // cout << bruteForceM2PrefixSum(arr);
     //    int n ;
     //    cin>>n;
-    //    int setBitCount = countSetBit(n);
+       int setBitCount = countSetBit(13);
     //    printDigit(n);
 
-    //    cout<<setBitCount<<endl;
+       cout<<setBitCount<<endl;
 
     // cout<<setBits(n);
+   
+
+//    int n = 6;
+   
+//     int count = 0;
+//    while(n>0){
+//     if((n&1)==1){
+//       count++;
+//     }
+//     n =n>>1;
+//    }
+//    cout<<count;
+
 
     return 0;
 }
