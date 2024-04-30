@@ -9,6 +9,8 @@ void fun(){
     cout<<"inside fun: "<<::x<<endl;
 }
 int main(){
+    int a;
+    cout<<"A: "<<a<<endl;
       
       x= 4; //global x
       int x = 20;// local to main fnx
