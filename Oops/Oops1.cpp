@@ -28,6 +28,7 @@ using namespace std;
 
  int main(){
    
+  //Paading -->> sabse bde data type ke nearest multiple  size ki padding add krte hai
 
     cout<<sizeof(Student)<<endl;
         // Student s1;
