@@ -43,6 +43,8 @@ int bs(vector<int>&a, int start,int x){
     }
     return -1;
 }
+
+
 // with binary search Approach
 int findPair(vector<int>&a, int k){
     sort(a.begin(), a.end());
