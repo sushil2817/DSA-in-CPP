@@ -2,95 +2,244 @@
 // Contigious Memory Allocation
 // memory wested
 
-
 // Contigious and Non contigious memory Allocation
 // Collection of Nodes
 // Linear Data structor
 
-
-// linked list is hindi 
+// linked list is hindi
 // jb tumhe null mil jaye mtlb linked list ka end ho gya
 
 // Linked List types
-// a)Singly Linked List 
-// b)Doubly Linked List 
-// c)Circular Linked List 
-// d)Circular Doubly Linked List 
+// a)Singly Linked List
+// b)Doubly Linked List
+// c)Circular Linked List
+// d)Circular Doubly Linked List
 
+#include <iostream>
+using namespace std;
 
+class Node
+{
+public:
+   int data;
+   Node *next;
 
-#include<iostream>
-using namespace std; 
+   Node()
+   {
+      cout << "Inside default constructor" << endl;
+      this->next = NULL;
+   }
 
- class Node{
-    public:
-
-    int data;
-    Node* next;
-    
-     Node(){
-        cout<<"Inside default constructor"<<endl;
-        this->next= NULL;
-     }
-
-     Node(int data){
-        this->data = data;
-        this->next = NULL;
-        // cout<<"inside pera constructor"<<endl;
-     }
-
-
- };
+   Node(int data)
+   {
+      this->data = data;
+      this->next = NULL;
+      // cout<<"inside pera constructor"<<endl;
+   }
+};
 
 // linked list ko hmesa temprary hi pass krege kbhi bhi original pointer pass nhi krege
- void printLL(Node* head){
-       
-        Node* temp = head;
-        while(temp != NULL){
-             cout<<temp->data<<"->";
-             temp = temp->next;
-        }
-        cout<<endl;
- }
+void printLL(Node *head)
+{
 
- int getLen (Node* head){
-    Node* temp = head;
-     int count = 0;
-     while(temp != NULL){
-        count++;
-        temp=temp->next;
-     }
+   Node *temp = head;
+   while (temp != NULL)
+   {
+      cout << temp->data << "->";
+      temp = temp->next;
+   }
+   cout << endl;
+}
 
-     return count;
- }
+int getLen(Node *head)
+{
+   Node *temp = head;
+   int count = 0;
+   while (temp != NULL)
+   {
+      count++;
+      temp = temp->next;
+   }
 
-int main(){
+   return count;
+}
+
+// head ko pass by reference krna hai hmesa
+// -----corner case:---- empty linked list ho to 
+//empty LL me head or tail same jgh hote hai
+// single element wale case me head =- tail
+void insertionAtHead(Node* &head,Node* &tail, int data){
+  
+    if(head == NULL){
+      // empty LL
+      Node * newNode = new Node(data);
+      head = newNode;
+      tail = newNode;
+    }else{
+
+   Node* newNode = new Node(data);
+      //  attach new node
+     newNode->next = head;
+   //   update head
+     head = newNode;
+    }
+}
+
+void insertAtTail(Node* &head, Node* &tail, int data){
+   if(head == NULL){
+   // empty case
+      // create node
+      Node* newNode = new Node(data);
+      // single nod eh head == tail
+      head = newNode;
+      tail = newNode;
+   }else{
+    // non empty case
+   Node* newNode = new Node(data);
+   tail->next = newNode;
+   tail = newNode;
+   }
    
-    // creation of Node
-
-    // Node a;
-    Node* first = new Node(10);
-    Node* second = new Node(20);
-    Node* third = new Node(30);
-    Node* fourth = new Node(40);
-    Node* fifth = new Node(50);
-    
-    first->next = second;
-    second->next = third;
-    third->next = fourth;
-    fourth->next = fifth;
-    
-
-     Node* head = first;
-
-     printLL(head);
-     cout<<endl;
-
-     cout<<getLen(head);
-
-    //  Insertion in a Linked List
-    
+}
 
 
-    return 0;
+void insertAtAnyPosition(Node* &head, Node* tail, int data, int position){
+   // if(position < 1){
+   //    cout<<"Cannot inser, please Enter a vaild position "<<endl;
+   //    return ;
+   // }
+
+   int length = getLen(head);
+   // if(position > length){
+   //     cout<<"Cannot inser, please Enter a vaild position "<<endl;
+   //     return ;
+   // }
+
+   if(position <= 1){
+      // insert at head
+      insertionAtHead(head, tail, data);
+   }
+   else if(position > length){
+       insertAtTail(head,tail,data);
+   }
+   else{
+      // insert at middle of ll
+      // step1: create Node
+      Node* newNode = new Node(data);
+      // step2: prev // curr to position
+      Node* prev = NULL;
+      Node* curr = head;
+
+      while(position != 1){
+         prev = curr;
+         curr = curr->next;
+         position--;
+      }
+      // step3: attach prev and curr node
+      prev->next = newNode;
+      newNode->next = curr;
+   }
+
+}
+
+
+
+
+
+void createTail(Node* head, Node* tail){
+   Node* temp = head;
+   while(temp->next != NULL){
+      temp = temp->next;
+   }
+   // jab ye loop khatam hojayega
+   // then aapka temp wala pointer khada hoga last nod epar
+   //  tab tail = temp krkde, tail ko last node pr le aao
+   tail = temp;
+}
+
+
+
+
+
+int main()
+{
+
+   // function ke according LL banna
+  
+     Node* head = NULL;
+     Node* tail = NULL;
+
+     
+      for(int i=1;i<=10;i++){
+       
+       insertAtTail(head, tail, i);
+
+      }
+
+      // printLL(head);
+
+      insertAtAnyPosition(head,tail, 40,1000);
+      printLL(head);
+
+
+
+
+
+
+   // // creation of Node
+
+   // // Node a;
+   // Node *first = new Node(10);
+   // Node *second = new Node(20);
+   // Node *third = new Node(30);
+   // Node *fourth = new Node(40);
+   // Node *fifth = new Node(50);
+   // Node* tail = fifth;
+
+   // first->next = second;
+   // second->next = third;
+   // third->next = fourth;
+   // fourth->next = fifth;
+
+   // Node *head = first;
+
+   // printLL(head);
+
+   // cout << endl;
+
+   // // cout << getLen(head);
+
+   
+   // // Insetion Node at head
+
+   // //  insertionAtHead(head,tail,500);
+     
+   // // cout << getLen(head);
+   // // cout<<endl;
+   // // printLL(head);
+
+
+   // // Insert Node at tail
+     
+   //   insertAtTail(head, tail, 300);
+      
+   // cout << getLen(head);
+   // cout<<endl;
+   // printLL(head);
+
+
+
+   // insert at any position
+
+
+
+
+   
+
+
+
+
+
+
+   return 0;
 }
