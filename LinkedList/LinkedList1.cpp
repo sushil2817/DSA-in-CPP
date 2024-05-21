@@ -65,45 +65,52 @@ int getLen(Node *head)
 }
 
 // head ko pass by reference krna hai hmesa
-// -----corner case:---- empty linked list ho to 
-//empty LL me head or tail same jgh hote hai
+// -----corner case:---- empty linked list ho to
+// empty LL me head or tail same jgh hote hai
 // single element wale case me head =- tail
-void insertionAtHead(Node* &head,Node* &tail, int data){
-  
-    if(head == NULL){
+void insertionAtHead(Node *&head, Node *&tail, int data)
+{
+
+   if (head == NULL)
+   {
       // empty LL
-      Node * newNode = new Node(data);
+      Node *newNode = new Node(data);
       head = newNode;
       tail = newNode;
-    }else{
+   }
+   else
+   {
 
-   Node* newNode = new Node(data);
+      Node *newNode = new Node(data);
       //  attach new node
-     newNode->next = head;
-   //   update head
-     head = newNode;
-    }
+      newNode->next = head;
+      //   update head
+      head = newNode;
+   }
 }
 
-void insertAtTail(Node* &head, Node* &tail, int data){
-   if(head == NULL){
-   // empty case
+void insertAtTail(Node *&head, Node *&tail, int data)
+{
+   if (head == NULL)
+   {
+      // empty case
       // create node
-      Node* newNode = new Node(data);
+      Node *newNode = new Node(data);
       // single nod eh head == tail
       head = newNode;
       tail = newNode;
-   }else{
-    // non empty case
-   Node* newNode = new Node(data);
-   tail->next = newNode;
-   tail = newNode;
    }
-   
+   else
+   {
+      // non empty case
+      Node *newNode = new Node(data);
+      tail->next = newNode;
+      tail = newNode;
+   }
 }
 
-
-void insertAtAnyPosition(Node* &head, Node* tail, int data, int position){
+void insertAtAnyPosition(Node *&head, Node *tail, int data, int position)
+{
    // if(position < 1){
    //    cout<<"Cannot inser, please Enter a vaild position "<<endl;
    //    return ;
@@ -115,22 +122,26 @@ void insertAtAnyPosition(Node* &head, Node* tail, int data, int position){
    //     return ;
    // }
 
-   if(position <= 1){
+   if (position <= 1)
+   {
       // insert at head
       insertionAtHead(head, tail, data);
    }
-   else if(position > length){
-       insertAtTail(head,tail,data);
+   else if (position > length)
+   {
+      insertAtTail(head, tail, data);
    }
-   else{
+   else
+   {
       // insert at middle of ll
       // step1: create Node
-      Node* newNode = new Node(data);
+      Node *newNode = new Node(data);
       // step2: prev // curr to position
-      Node* prev = NULL;
-      Node* curr = head;
+      Node *prev = NULL;
+      Node *curr = head;
 
-      while(position != 1){
+      while (position != 1)
+      {
          prev = curr;
          curr = curr->next;
          position--;
@@ -139,16 +150,13 @@ void insertAtAnyPosition(Node* &head, Node* tail, int data, int position){
       prev->next = newNode;
       newNode->next = curr;
    }
-
 }
 
-
-
-
-
-void createTail(Node* head, Node* tail){
-   Node* temp = head;
-   while(temp->next != NULL){
+void createTail(Node *head, Node *tail)
+{
+   Node *temp = head;
+   while (temp->next != NULL)
+   {
       temp = temp->next;
    }
    // jab ye loop khatam hojayega
@@ -157,34 +165,24 @@ void createTail(Node* head, Node* tail){
    tail = temp;
 }
 
-
-
-
-
 int main()
 {
 
    // function ke according LL banna
-  
-     Node* head = NULL;
-     Node* tail = NULL;
 
-     
-      for(int i=1;i<=10;i++){
-       
-       insertAtTail(head, tail, i);
+   Node *head = NULL;
+   Node *tail = NULL;
 
-      }
+   for (int i = 1; i <= 10; i++)
+   {
 
-      // printLL(head);
+      insertAtTail(head, tail, i);
+   }
 
-      insertAtAnyPosition(head,tail, 40,1000);
-      printLL(head);
+   // printLL(head);
 
-
-
-
-
+   insertAtAnyPosition(head, tail, 40, 1000);
+   printLL(head);
 
    // // creation of Node
 
@@ -209,37 +207,23 @@ int main()
 
    // // cout << getLen(head);
 
-   
    // // Insetion Node at head
 
    // //  insertionAtHead(head,tail,500);
-     
+
    // // cout << getLen(head);
    // // cout<<endl;
    // // printLL(head);
 
-
    // // Insert Node at tail
-     
+
    //   insertAtTail(head, tail, 300);
-      
+
    // cout << getLen(head);
    // cout<<endl;
    // printLL(head);
 
-
-
    // insert at any position
-
-
-
-
-   
-
-
-
-
-
 
    return 0;
 }
