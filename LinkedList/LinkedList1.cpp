@@ -15,6 +15,9 @@
 // c)Circular Linked List
 // d)Circular Doubly Linked List
 
+// T.C. O(n) because for insertation oe deletion ke liye puri Linked list me hi triverse krna pad rha h
+
+
 #include <iostream>
 using namespace std;
 
@@ -35,6 +38,10 @@ public:
       this->data = data;
       this->next = NULL;
       // cout<<"inside pera constructor"<<endl;
+   }
+
+   ~Node(){
+      cout<<"Destructor Called for "<<this->data<<endl;
    }
 };
 
@@ -165,6 +172,77 @@ void createTail(Node *head, Node *tail)
    tail = temp;
 }
 
+
+//   Deletion from singlly linked list
+  /* 
+    a) delete from head
+    b) delete from any position
+    c) delete from tail
+
+  */
+
+ void deleteNode(Node* &head, Node* &tail, int position){
+   //   empty list
+   if(head == NULL){
+      cout<<"Cannot delete , coz LL is empty"<<endl;
+      return;
+   }
+   if(head == tail){
+      // single element
+      Node* temp = head;
+      delete temp;
+      head = NULL;
+      tail = NULL;
+   }
+   int len = getLen(head);
+   // delete from head
+    
+   if(position == 1){
+      // first node ko delete kr do
+      Node* temp = head;
+      head = head->next;
+      // head = temp->next;
+      temp->next = NULL;
+      delete temp;
+
+   }else if(position == len){
+      // last node ko delete kardo
+      
+      //find prev
+       Node* prev = head;
+       while(prev->next != tail){
+         prev = prev->next;
+       }
+      //  prev node ka link null karo
+      prev->next = NULL;
+      // delete tail
+       delete tail;
+      //  update tail
+       tail = prev;
+
+   }else {
+      // middle me koii node ko delete karna
+         //  step 1 set prev/curr pointers
+         Node* prev = NULL;
+         Node* curr = head;
+
+         while(position != 1){
+            position--;
+            prev = curr;
+            curr = curr->next;
+
+         }
+         // step2: prev ke next me curr ka next add kro
+         prev->next = curr->next;
+         // step3: node isolate krdo
+         curr->next = NULL;
+      //   step4: delete node
+      delete curr;
+
+   }
+ }
+
+
 int main()
 {
 
@@ -181,8 +259,24 @@ int main()
 
    // printLL(head);
 
-   insertAtAnyPosition(head, tail, 40, 1000);
+   // insertAtAnyPosition(head, tail, 40, 1000);
+   // printLL(head);
+
+   // cout<<endl;
+   // cout<<endl;
+
+   // deleteNode(head,tail,6);
+   // cout<<endl;
+   // printLL(head);
+
    printLL(head);
+
+   cout<<endl;
+   cout<<"Before-> Length of LL is: "<<getLen(head)<<endl;
+   cout<<"Before tail->"<<tail->data<<endl;
+   deleteNode(head,tail,1);
+   cout<<"After Length of LL is "<<getLen(head)<<endl;
+   cout<<"After tail => "<<tail->data<<endl;
 
    // // creation of Node
 
