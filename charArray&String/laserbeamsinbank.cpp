@@ -1,45 +1,47 @@
 // 2125
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 
-class Solution {
+    class Solution
+{
 public:
-       
-       int countDevices(string& binary){
+    int countDevices(string &binary)
+    {
         int c = 0;
-        for(auto b:binary)
-             c+=b-'0';
-             return c;
-       }
-    int numberOfBeams(vector<string>& bank) {
-         vector<int> devices;
-         for(auto row:bank)
+        for (auto b : binary)
+            c += b - '0';
+        return c;
+    }
+    int numberOfBeams(vector<string> &bank)
+    {
+        vector<int> devices;
+        for (auto row : bank)
             devices.push_back(countDevices(row));
-            int beams = 0;
-            for(int i=0;i<devices.size();++i){
-                int j=i+1;
-                while(j<devices.size()){
-                    beams += devices[i] * devices[j];
-                    if(devices[j]==0){
-                        j++;
-                    }else{
-                        break;
-                    }
+        int beams = 0;
+        for (int i = 0; i < devices.size(); ++i)
+        {
+            int j = i + 1;
+            while (j < devices.size())
+            {
+                beams += devices[i] * devices[j];
+                if (devices[j] == 0)
+                {
+                    j++;
+                }
+                else
+                {
+                    break;
                 }
             }
-            return beams;
+        }
+        return beams;
     }
 };
 
-//T.C. O(n^2);
+// T.C. O(n^2);
 {
-          
-          
-          
-          
-          
-          
- return 0;
+
+    return 0;
 }
