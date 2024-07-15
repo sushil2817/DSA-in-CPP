@@ -120,60 +120,153 @@
 //     return 0;
 // }
 
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+
+// class Stack
+// {
+
+// public:
+//     int *arr;
+//     int size;
+//     int top;
+
+//     Stack(int size)
+//     {
+//         arr = new int[size];
+//         this->size = size;
+//         this->top = -1;
+//     }
+
+//     void push(int data)
+//     {
+//         if(top == size-1){
+//             cout<<"stack overflow"<<endl;
+//         }
+//         else{
+//            top++;
+//            arr[top] = data;
+//         }
+//     }
+
+//     void pop()
+//     {
+//         if(top ==-1){
+//             cout<<"stack under flow"<<endl; 
+//         }
+//         else{
+//           top--;
+//         }
+//     }
+
+//     bool isEmpty()
+//     {
+//         if (top == -1)
+//         {
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+//     int getTop(){
+//         if(top == -1){
+//             cout<<"stack is empty"<<endl;
+//              return -1;
+//         }else{
+//         return arr[top];
+//         }
+//     }
+
+//     int getSize(){
+//         return top+1;
+//     }
+
+//     void printStack(){
+//         cout<<"Top: "<<top<<endl;
+//         cout<<"Top element: "<<getTop()<<endl;
+//         cout<<"Stack: ";
+//         for(int i=0;i<getSize();i++){
+//             cout<<arr[i]<<" ";
+//         }
+//         cout<<endl<<endl;
+//     }
+// };
+
+// int main()
+// {
+//       Stack st(8);
+//       st.push(10);
+//       st.printStack();
+//       st.push(20);
+//       st.printStack();
+//       st.push(30);
+//       st.printStack();
+//       st.push(40);
+//       st.printStack();
+
+//       st.pop();
+//       st.printStack();
+//       st.pop();
+//       st.printStack();
+//       st.pop();
+//       st.printStack();
+//       st.pop();
+//       st.printStack();
+
+//     return 0;
+// }
+
+
+// stack me indexka option nhi hota aapko last stack hi nikalna hoga
+
+// stack use Lifo
+
+#include<iostream>
 using namespace std;
+class Stack{
 
-class Stack
-{
-
-public:
-    int *arr;
+    public:
+    int* arr;
     int size;
     int top;
 
-    Stack(int size)
-    {
+    Stack (int size){
         arr = new int[size];
         this->size = size;
         this->top = -1;
     }
 
-    void push(int data)
-    {
+    void push(int data){
         if(top == size-1){
-            cout<<"stack overflow"<<endl;
-        }
-        else{
-           top++;
-           arr[top] = data;
-        }
-    }
-
-    void pop()
-    {
-        if(top ==-1){
-            cout<<"stack under flow"<<endl; 
-        }
-        else{
-          top--;
+            cout<<"Stack overflow"<<endl;
+        }else{
+            top++;
+            arr[top] = data;
         }
     }
 
-    bool isEmpty()
-    {
-        if (top == -1)
-        {
+    void pop(){
+        if(top == -1){
+            cout<<"Stack underflow"<<endl;
+        }
+        else{
+        top--;
+        }
+    }
+
+    bool isEmpty(){
+        if(top == -1){
             return true;
         }else{
             return false;
         }
     }
+
     int getTop(){
         if(top == -1){
-            cout<<"stack is empty"<<endl;
-             return -1;
+            cout<<"Stack is empty"<<endl;
         }else{
-        return arr[top];
+            return arr[top];
         }
     }
 
@@ -181,37 +274,46 @@ public:
         return top+1;
     }
 
-    void printStack(){
-        cout<<"Top: "<<top<<endl;
-        cout<<"Top element: "<<getTop()<<endl;
+    void print(){
+        cout<<"top: "<<top<<endl;
+        cout<<"Top Element: "<<getTop()<<endl;
         cout<<"Stack: ";
         for(int i=0;i<getSize();i++){
             cout<<arr[i]<<" ";
         }
-        cout<<endl<<endl;
+        cout<<endl;
+        cout<<endl;
     }
 };
 
 int main()
 {
-      Stack st(8);
-      st.push(10);
-      st.printStack();
-      st.push(20);
-      st.printStack();
-      st.push(30);
-      st.printStack();
-      st.push(40);
-      st.printStack();
 
-      st.pop();
-      st.printStack();
-      st.pop();
-      st.printStack();
-      st.pop();
-      st.printStack();
-      st.pop();
-      st.printStack();
+    // Creation
+    // Stack st(8);
+    
+    // st.push(10);
+    // st.print();
+    // st.push(20);
+    // st.print();
+    // st.push(30);
+    // st.print();
+    // st.push(40);
+    // st.print();
+    // st.push(50);
+    // st.push(60);
+    // st.push(70);
+    // st.push(80);
+    
+    // st.print();
 
-    return 0;
+    
+
+    
+
+
+
+
+
+return 0;
 }
