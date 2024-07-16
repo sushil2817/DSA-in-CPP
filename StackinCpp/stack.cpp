@@ -221,99 +221,119 @@
 
 // stack use Lifo
 
+// #include<iostream>
+// using namespace std;
+// class Stack{
+
+//     public:
+//     int* arr;
+//     int size;
+//     int top;
+
+//     Stack (int size){
+//         arr = new int[size];
+//         this->size = size;
+//         this->top = -1;
+//     }
+
+//     void push(int data){
+//         if(top == size-1){
+//             cout<<"Stack overflow"<<endl;
+//         }else{
+//             top++;
+//             arr[top] = data;
+//         }
+//     }
+
+//     void pop(){
+//         if(top == -1){
+//             cout<<"Stack underflow"<<endl;
+//         }
+//         else{
+//         top--;
+//         }
+//     }
+
+//     bool isEmpty(){
+//         if(top == -1){
+//             return true;
+//         }else{
+//             return false;
+//         }
+//     }
+
+//     int getTop(){
+//         if(top == -1){
+//             cout<<"Stack is empty"<<endl;
+//         }else{
+//             return arr[top];
+//         }
+//     }
+
+//     int getSize(){
+//         return top+1;
+//     }
+
+//     void print(){
+//         cout<<"top: "<<top<<endl;
+//         cout<<"Top Element: "<<getTop()<<endl;
+//         cout<<"Stack: ";
+//         for(int i=0;i<getSize();i++){
+//             cout<<arr[i]<<" ";
+//         }
+//         cout<<endl;
+//         cout<<endl;
+//     }
+// };
+
+// int main()
+// {
+
+//     Creation
+//     Stack st(8);
+    
+//     st.push(10);
+//     st.print();
+//     st.push(20);
+//     st.print();
+//     st.push(30);
+//     st.print();
+//     st.push(40);
+//     st.print();
+//     st.push(50);
+//     st.push(60);
+//     st.push(70);
+//     st.push(80);
+//     st.print();
+
+
+// return 0;
+// }
+
+
+// reverse number of items
+// eg: sushil = lihsus
+//  stack ka mtlab recursion
+// recurstion mtlb stack
+
 #include<iostream>
+#include<stack>
 using namespace std;
-class Stack{
-
-    public:
-    int* arr;
-    int size;
-    int top;
-
-    Stack (int size){
-        arr = new int[size];
-        this->size = size;
-        this->top = -1;
-    }
-
-    void push(int data){
-        if(top == size-1){
-            cout<<"Stack overflow"<<endl;
-        }else{
-            top++;
-            arr[top] = data;
-        }
-    }
-
-    void pop(){
-        if(top == -1){
-            cout<<"Stack underflow"<<endl;
-        }
-        else{
-        top--;
-        }
-    }
-
-    bool isEmpty(){
-        if(top == -1){
-            return true;
-        }else{
-            return false;
-        }
-    }
-
-    int getTop(){
-        if(top == -1){
-            cout<<"Stack is empty"<<endl;
-        }else{
-            return arr[top];
-        }
-    }
-
-    int getSize(){
-        return top+1;
-    }
-
-    void print(){
-        cout<<"top: "<<top<<endl;
-        cout<<"Top Element: "<<getTop()<<endl;
-        cout<<"Stack: ";
-        for(int i=0;i<getSize();i++){
-            cout<<arr[i]<<" ";
-        }
-        cout<<endl;
-        cout<<endl;
-    }
-};
-
 int main()
 {
+    string str = "sushil";
+    stack<char>st;
 
-    // Creation
-    // Stack st(8);
-    
-    // st.push(10);
-    // st.print();
-    // st.push(20);
-    // st.print();
-    // st.push(30);
-    // st.print();
-    // st.push(40);
-    // st.print();
-    // st.push(50);
-    // st.push(60);
-    // st.push(70);
-    // st.push(80);
-    
-    // st.print();
+    for(int i=0;i<str.length();i++){
+        char ch = str[i];
+        st.push(ch);
+    }
 
+    while(!st.empty()){
+        cout<<st.top()<<" ";
+        st.pop();
+    }
     
 
-    
-
-
-
-
-
-return 0;
+    return 0;
 }
