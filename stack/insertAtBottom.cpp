@@ -17,7 +17,7 @@ void insertAtBottom(stack<int>&st,int &element){
     // backtrack
     st.push(temp);
 }
-
+ 
 int main()
 {
     stack<int>st;
@@ -38,3 +38,6 @@ int main()
 
 return 0;
 }
+
+
+// revision it again
