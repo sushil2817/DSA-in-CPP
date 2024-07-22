@@ -28,9 +28,7 @@ int main()
 
     int element = 400;
 
-    insertAtBottom(st,element);
-
-    while(!st.empty()){
+p    while(!st.empty()){
         cout<<st.top()<<" ";
         st.pop();
     }
