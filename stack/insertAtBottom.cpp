@@ -17,7 +17,7 @@
 //     // backtrack
 //     st.push(temp);
 // }
- 
+
 // int main()
 // {
 //     stack<int>st;
@@ -33,20 +33,20 @@
 //         st.pop();
 //     }
 
-
 // return 0;
 // }
 
-
 // revision it again
 
-#include<iostream>
-#include<stack>
+#include <iostream>
+#include <stack>
 using namespace std;
 
-void insertAtBottom(stack<int>&st, int &element){
+void insertAtBottom(stack<int> &st, int &element)
+{
     // base case
-    if(st.empty()){
+    if (st.empty())
+    {
         st.push(element);
         return;
     }
@@ -57,33 +57,29 @@ void insertAtBottom(stack<int>&st, int &element){
     st.pop();
 
     // baki recursion dekh lega
-    insertAtBottom(st,element);
+    insertAtBottom(st, element);
 
     // backTrack
     st.push(temp);
 }
 int main()
 {
-    stack<int>st;
+    stack<int> st;
 
     st.push(10);
     st.push(20);
     st.push(30);
     st.push(40);
-    
-    int element = 400;
 
+    int element = 400; 
 
+    insertAtBottom(st, element);
 
-    insertAtBottom(st,element);
-
-
-    while( !st.empty()){
-        cout<<st.top()<<" ";
+    while (!st.empty())
+    {
+        cout << st.top() << " ";
         st.pop();
     }
-    
-    
-    
-return 0;
-} 
+
+    return 0;
+}

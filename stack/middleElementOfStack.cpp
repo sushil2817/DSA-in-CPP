@@ -123,7 +123,7 @@ int main()
     // st.push(60);
 
     int mid = getMiddleElement(st);
-    cout<<"Middle element "<<mid<<endl;
+    cout<<"Middle element: "<<mid<<endl;
     
     
     
