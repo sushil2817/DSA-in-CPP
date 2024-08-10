@@ -12,7 +12,7 @@ vector<int> nextSmallerElement(int* arr, int size, vector<int> &ans){
         // and find kro current element ke liye
         while(st.top() >= curr){
             st.pop();
-        }
+        } 
         ans[i] = st.top();
         st.push(curr);
     }
