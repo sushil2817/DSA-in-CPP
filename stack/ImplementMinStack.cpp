@@ -5,10 +5,9 @@ using namespace std;
 class MinStack {
 public:
 
-vector<pair<int,int>> st;
-MinStack() { 
-    
-}
+    vector<pair<int,int>> st;
+
+    MinStack() {}
 
 void push(int val) {
     if(st.empty()){
