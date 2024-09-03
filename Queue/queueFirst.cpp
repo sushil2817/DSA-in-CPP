@@ -1,50 +1,47 @@
-#include <iostream>
-#include <queue>
+// Stack -> FIFO
+// QUEUE -> LIFO
+#include<iostream>
+#include<queue>
 using namespace std;
-int main()
-{
-    // creation
-    queue<int> q;
+int main(){
 
-    // insertion
-    q.push(5);
-    // size
-    cout <<"Size of queue: "<< q.size() << endl;
-    // empty
+// creation
+queue<int>q;
 
-    if (q.empty() == true)
-    {
-        cout << "queue is empty" << endl;
-    }
-    else
-    {
-        cout << "queue is not empty" << endl;
-    }
+// insertion
+q.push(5);
 
-    // remove
+// size 
 
-    q.pop();
-    cout <<"Size of queue: "<< q.size() << endl;
+cout<<"Size of Queue: "<< q.size()<<endl;
 
+// empty
+if(q.empty() == true){
+    cout<<"Queue is empty"<<endl;
+}else{
+    cout<<"Queue is not empty"<<endl;
+}
 
-    if (q.empty() == true)
-    {
-        cout << "queue is empty" << endl;
-    }
-    else
-    {
-        cout << "queue is not empty" << endl;
-    }
+// removal
+q.pop();
+
+cout<<"Size of Queue: "<< q.size()<<endl;
+
+if(q.empty() == true){
+    cout<<"Queue is empty"<<endl;
+}else{
+    cout<<"Queue is not empty"<<endl;
+}
 
 
-    q.push(10);
-    q.push(20);
-    q.push(30);
-    q.push(40);
+q.push(10);
+q.push(20);
+q.push(30);
 
-    cout<<"Front element of queue is: "<<q.front()<<endl;
-    cout<<"Last element of queue is: "<<q.back()<<endl;
+cout<<"front element of queue is: "<<q.front()<<endl;
+cout<<"last element of queue is: "<<q.back()<<endl;
 
 
-    return 0;
+
+return 0;
 }
