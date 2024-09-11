@@ -13,9 +13,7 @@ int main(){
     balance = 20000;
 
     // uid = 1212;
-
     // cout<<"Welcome to chai with cpp1"<<endl;
-    
     // cout<<"Welcome to chai with cpp2"<<endl;
     // cout<<"Welcome to chai with cpp3"<<endl;
 
