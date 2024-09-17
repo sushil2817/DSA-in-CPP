@@ -1,33 +1,37 @@
 // 49
 
 #include<iostream>
+#include<vector>
 using namespace std;
 
-class Solution {
+class Solution
+{
 public:
-    vector<vector<string>> groupAnagrams(vector<string>& strs) {
-         map<string, vector<string>>mp;
+   vector<vector<string>> groupAnagrams(vector<string> &strs)
+   {
+      map<string, vector<string>> mp;
 
-         for(auto str:strs){
-            string s = str;
-            sort(s.begin(),s.end());
-            mp[s].push_back(str);
-         }
+      for (auto str : strs)
+      {
+         string s = str;
+         sort(s.begin(), s.end());
+         mp[s].push_back(str);
+      }
 
-         vector<vector<string>>ans;
+      vector<vector<string>> ans;
 
-         for(auto it=mp.begin();it !=mp.end();it++){
-            ans.push_back(it->second);
-         }
-         return ans;
-    }
+      for (auto it = mp.begin(); it != mp.end(); it++)
+      {
+         ans.push_back(it->second);
+      }
+      return ans;
+   }
 };
 
 int main()
 {
-// t.c. O(n klogk)
-// s.c. O(nk) 
+   // t.c. O(n klogk)
+   // s.c. O(nk)
 
-
- return 0;
+   return 0;
 }
