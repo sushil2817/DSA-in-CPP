@@ -1,6 +1,13 @@
 #include<iostream>
 using namespace std;
 
+// TimeComplexity O(1)
+// push
+// pop
+// size 
+// rear 
+// front
+
 class Queue{
 
     public:
@@ -131,7 +138,5 @@ int main(){
 
     cout<<"Rear element: "<<q.getRear()<<endl;
     cout<<"Front element: "<<q.getFront()<<endl;
-
-
 return 0;
 }
