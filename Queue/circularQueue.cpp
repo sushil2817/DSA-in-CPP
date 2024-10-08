@@ -26,7 +26,8 @@ class Cqueue{
         // normal
 
 //  bhut glti hoti h yha
-        if((front == 0 && rear == size-1) || (rear == front -1)){
+        if((front == 0 && rear == size-1) || (rear == front -1))// bhool jaoge bar bar
+        { 
             cout<<"Overflow"<<endl;
         }else if(front == -1 && rear == -1){
             front++;
@@ -59,7 +60,7 @@ class Cqueue{
             arr[front] = -1;
             front = 0;
         }else{
-            arr[front] = -1;
+            arr[front] = -1; 
             front++;
         }
     }
