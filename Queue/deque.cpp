@@ -1,106 +1,135 @@
-#include<iostream>
+#include <iostream>
 // #include<deque>
 using namespace std;
-class Deque{
+class Deque
+{
 
-    public:
-
-    int* arr;
+public:
+    int *arr;
     int size;
     int front;
     int rear;
 
-    Deque(int size){
+    Deque(int size)
+    {
         arr = new int[size];
         this->size = size;
         front = -1;
         rear = -1;
     }
 
-    void pushFront(int val){
+    void pushFront(int val)
+    {
         // overflow
         // single element
-        if((front == 0 && rear == size-1) || (rear == front -1))// bhool jaoge bar bar
-        { 
-            cout<<"Overflow"<<endl;
-        }else if(front == -1 && rear == -1){
+        if ((front == 0 && rear == size - 1) || (rear == front - 1)) // bhool jaoge bar bar
+        {
+            cout << "Overflow" << endl;
+        }
+        else if (front == -1 && rear == -1)
+        {
             front++;
             rear++;
             arr[front] = val;
-        }else if(front == 0 && rear != size-1){
-            front== size -1;
+        }
+        else if (front == 0 && rear != size - 1)
+        {
+            front == size - 1;
             arr[front] = val;
-        }else{
+        }
+        else
+        {
             front--;
             arr[front] = val;
         }
     }
 
-    void pushBack(int val){
+    void pushBack(int val)
+    {
         // overflow
         // empty
         // circular
         // normal
         //  bhut glti hoti h yha
-        if((front == 0 && rear == size-1) || (rear == front -1))// bhool jaoge bar bar
-        { 
-            cout<<"Overflow"<<endl;
-        }else if(front == -1 && rear == -1){
+        if ((front == 0 && rear == size - 1) || (rear == front - 1)) // bhool jaoge bar bar
+        {
+            cout << "Overflow" << endl;
+        }
+        else if (front == -1 && rear == -1)
+        {
             front++;
             rear++;
             arr[rear] = val;
-        }else if(rear == size-1 && front != 0){
+        }
+        else if (rear == size - 1 && front != 0)
+        {
             rear = 0;
             arr[rear] = val;
-        }else{
+        }
+        else
+        {
             rear++;
             arr[rear] = val;
         }
     }
 
-    void popFront(){
+    void popFront()
+    {
         // underflow
         // empty/single
         // circular
         // normal
-        if((front == -1 && rear == -1) ){
-            cout<<"Underflow"<<endl;
-        }else if(front == rear){ // case bhool jate h single element wala
+        if ((front == -1 && rear == -1))
+        {
+            cout << "Underflow" << endl;
+        }
+        else if (front == rear)
+        { // case bhool jate h single element wala
             arr[front] = -1;
             front = -1;
             rear = -1;
-        }else if(front == size-1){
+        }
+        else if (front == size - 1)
+        {
             arr[front] = -1;
             front = 0;
-        }else{
-            arr[front] = -1; 
+        }
+        else
+        {
+            arr[front] = -1;
             front++;
         }
     }
-    void popBack(){
+    void popBack()
+    {
         // underflow
         // single element
         // normal case
-        if((front == -1 && rear == -1) ){
-            cout<<"Underflow"<<endl;
-        }else if(front ==  rear){
+        if ((front == -1 && rear == -1))
+        {
+            cout << "Underflow" << endl;
+        }
+        else if (front == rear)
+        {
             arr[rear] = -1;
             front = -1;
             rear = -1;
-        }else if(rear == 0 ){
-            arr[rear] = -1;
-            rear = size-1;
         }
-        else{
+        else if (rear == 0)
+        {
+            arr[rear] = -1;
+            rear = size - 1;
+        }
+        else
+        {
             arr[rear] = -1;
             rear--;
         }
     }
 };
 
-int main(){
+int main()
+{
 
-    
-
-return 0;
+    return 0;
 }
