@@ -1,17 +1,18 @@
 // circular queue
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Cqueue{ 
-    
-    public:
+class Cqueue
+{
 
-        int* arr;
-        int size;
-        int front;
-        int rear;
+public:
+    int *arr;
+    int size;
+    int front;
+    int rear;
 
-    Cqueue(int size){
+    Cqueue(int size)
+    {
         arr = new int[size];
         this->size = size;
         front = -1;
@@ -19,64 +20,79 @@ class Cqueue{
     }
 
     // push
-    void push(int val){
+    void push(int val)
+    {
         // overflow
         // empty
         // circular
         // normal
 
-//  bhut glti hoti h yha
-        if((front == 0 && rear == size-1) || (rear == front -1))// bhool jaoge bar bar
-        { 
-            cout<<"Overflow"<<endl;
-        }else if(front == -1 && rear == -1){
+        //  bhut glti hoti h yha
+        if ((front == 0 && rear == size - 1) || (rear == front - 1)) // bhool jaoge bar bar
+        {
+            cout << "Overflow" << endl;
+        }
+        else if (front == -1 && rear == -1)
+        {
             front++;
             rear++;
             arr[rear] = val;
-        }else if(rear == size-1 && front != 0){
+        }
+        else if (rear == size - 1 && front != 0)
+        {
             rear = 0;
             arr[rear] = val;
-        }else{
+        }
+        else
+        {
             rear++;
             arr[rear] = val;
         }
     }
 
-
     // pop
 
-    void pop(){
+    void pop()
+    {
         // underflow
         // empty/single
         // circular
         // normal
-        if((front == -1 && rear == -1) ){
-            cout<<"Underflow"<<endl;
-        }else if(front == rear){ // case bhool jate h single element wala
+        if ((front == -1 && rear == -1))
+        {
+            cout << "Underflow" << endl;
+        }
+        else if (front == rear)
+        { // case bhool jate h single element wala
             arr[front] = -1;
             front = -1;
             rear = -1;
-        }else if(front == size-1){
+        }
+        else if (front == size - 1)
+        {
             arr[front] = -1;
             front = 0;
-        }else{
-            arr[front] = -1; 
+        }
+        else
+        {
+            arr[front] = -1;
             front++;
         }
     }
 
-
-     void print(){
-        cout<<"Printing Queue: ";
-        for(int i=0;i<size;i++){
-            cout<<arr[i]<<" ";
+    void print()
+    {
+        cout << "Printing Queue: ";
+        for (int i = 0; i < size; i++)
+        {
+            cout << arr[i] << " ";
         }
-        cout<<endl;
+        cout << endl;
     }
-
 };
 
-int main(){
+int main()
+{
 
     Cqueue q(5);
     q.print();
@@ -113,8 +129,8 @@ int main(){
     q.pop();
     q.pop();
     q.pop();
-   
+
     q.print();
 
-return 0;
+    return 0;
 }
