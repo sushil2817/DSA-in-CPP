@@ -1,47 +1,44 @@
 #include<iostream>
 #include<queue>
 using namespace std;
-
-class node{
+class Node{
     public:
-    int data;
-    node* left;
-    node* right;
+        int data;
+        Node* left;
+        Node* right;
 
-    node(int d){
+    Node(int d){
         this->data = d;
         this->left = NULL;
         this->right = NULL;
     }
-
 };
 
-node* buildTree(node* root){
-
-    cout<<"Enter the data: "<<endl;
+Node* buildTree(Node* root){
+    cout<<"Enter the data:" <<endl;
     int data;
     cin>>data;
-    root = new node(data);
+    root = new Node(data);
     if(data == -1){
         return NULL;
     }
 
-    cout<<"Enter data for inserting in Left of "<<data<<endl;
+    cout<<"Enter data for inserting in left of "<<data<<endl;
     root->left = buildTree(root->left);
-    cout<<"Enter data for inserting in Right of"<<data<<endl;
+    cout<<"Enter data for inserting in right of "<<data<<endl;
     root->right = buildTree(root->right);
-
     return root;
+
 }
 
-void leverORderTraversal(node* root){
-    queue<node*>q;
+void levelOrderTriversal(Node* root){
+    queue<Node*>q;
     q.push(root);
-    while (!q.empty())
-    {   
-        node* temp = q.front();
+    
+    while(!q.empty()){
+        Node* temp = q.front();
+        cout<<temp->data<<" ";
         q.pop();
-
         if(temp->left){
             q.push(temp->left);
         }
@@ -50,14 +47,14 @@ void leverORderTraversal(node* root){
             q.push(temp->right);
         }
     }
-    
 }
 
 int main(){
 
-    node* root = NULL;
-    // creating a tree
-    root = buildTree(root);
+    Node* root = NULL;
 
+    // creating a Tree
+    root = buildTree(root);
+    cout<<root<<endl;
 return 0;
 }
