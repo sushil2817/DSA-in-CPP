@@ -68,5 +68,9 @@ int main(){
     cout<<ptr<<endl;
     cout<<&ptr<<endl;
 
+
+    int *ptr = 0;
+    cout<<*ptr<<endl;
+
 return 0;
 } 
