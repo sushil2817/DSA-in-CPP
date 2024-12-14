@@ -55,22 +55,63 @@
 // }
 
 
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int a = 5;
+//     cout<<a<<endl;
+//     cout<<"address of a : "<<&a<<endl; 
+//     // pointer creation
+//     // int* ptr = &a;
+//     // accessing value store at address stored in ptr
+//     // cout<<"Acessing: "<<*ptr<<endl;
+//     // cout<<ptr<<endl;
+//     // cout<<&ptr<<endl;
+
+
+//     int *ptr = 0;
+//     cout<<*ptr<<endl;
+
+// return 0;
+// } 
+
+
+
 #include<iostream>
 using namespace std;
 int main(){
-    int a = 5;
-    cout<<a<<endl;
-    cout<<"address of a : "<<&a<<endl; 
-    // pointer creation
-    int* ptr = &a;
-    // accessing value store at address stored in ptr
-    cout<<"Acessing: "<<*ptr<<endl;
-    cout<<ptr<<endl;
-    cout<<&ptr<<endl;
+
+// pointer with array
+
+int arr[5] = {10,20,30,40,50};
 
 
-    int *ptr = 0;
-    cout<<*ptr<<endl;
+// cout<<arr<<endl;
+// cout<<arr[0]<<endl;
+// cout<<&arr[0]<<endl;
+// cout<<&arr[0]<<endl;
+// cout<<&arr<<endl;
+
+    
+    // arr = arr+1;
+
+    // int* ptr = arr;
+    // // int * ptr2 = arr+1;
+
+    // char ch[50] = "sushil";
+    // char* cptr = ch;
+
+    // cout<<ch<<endl;
+    // cout<<&ch<<endl;
+    // cout<<*cptr<<endl;
+    // cout<<cptr<<endl;
+    // cout<<&cptr<<endl;
+
+        char ch[10] = 'sushil';
+        char *cptr = &ch;
+
+        cout<<cptr;
+
 
 return 0;
-} 
+}
