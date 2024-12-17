@@ -53,15 +53,40 @@
 #include<iostream>
 using namespace std;
 
-void solve(int *arr, int size){
-    cout<<"Size of array inside func: "<<sizeof(arr)<<endl;
+void solve(int* &p){ 
+    // by refrence pass
+    // // cout<<"Size of array inside func: "<<sizeof(arr)<<endl;
+    // cout<<"Inside solve -> arr: "<<arr<<endl;
+    // cout<<"Inside solve -> &arr: "<<&arr<<endl;
+    // *arr = *arr+1;
+
+        p=p+1;
+
 }
 int main(){
 
-    int arr[] = {10,20,30,40,50};
-    cout<<"Size of array: "<<sizeof(arr)<<endl;
-    solve(arr,4);
+    // int arr[] = {10,20,30};
+    // cout<<"Size of array: "<<sizeof(arr)<<endl;
+    // solve(arr,3);
+
+    // cout<<"Inside main -> arr: "<<arr<<endl;
+    // cout<<"Inside main -> &arr: "<<&arr<<endl;
+
+    // for(int i=0;i<3;i++){
+    //     cout<<arr[i]<<" ";
+
+    int a = 5;
+    int *p = &a;
 
 
+    cout<<"p: "<<p<<endl;
+    cout<<"&p: "<<&p<<endl;
+    cout<<"*p: "<<*p<<endl;
+
+    solve(p);
+
+    cout<<"p: "<<p<<endl;
+    cout<<"&p: "<<&p<<endl;
+    cout<<"*p: "<<*p<<endl;
 return 0;
 }
