@@ -16,7 +16,6 @@ void countZeroOne(int arr[], int size){
     cout<<"One Count: "<<oneCount<<endl;
 }
 
-
 int main(){
 
     int arr[] = {0,0,0,1,1,0,1,0,1,0,1,0,1,1,1,1,0};
