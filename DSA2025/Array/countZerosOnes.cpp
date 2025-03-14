@@ -17,12 +17,8 @@ void countZeroOne(int arr[], int size){
 }
 
 int main(){
-
     int arr[] = {0,0,0,1,1,0,1,0,1,0,1,0,1,1,1,1,0};
-
     int size = 17;
-
     countZeroOne(arr,size);
-
 return 0;
 }
