@@ -19,8 +19,6 @@ using namespace std;
              double maxAvg = maxSum/(double)k;
                 return maxAvg;
    }
-
-
     double slidingWindow(vector<int>& nums, int k){
          int i=0,j=k-1;
          int sum=0;
