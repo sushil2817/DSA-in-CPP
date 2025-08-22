@@ -1,10 +1,15 @@
 #include<iostream>
-
 using namespace std;
+namespace mySpace{
+    void display(){
+        // print
+    }
+};
 
 int main(){
+    mySpace::display();
+    cout<<"hello world";
+    return 0;
+}
 
-cout<<"hello world";
-
-return 5;
-} 
+int sushil(){}
