@@ -7,7 +7,6 @@ int main(){
         double priceOfTea = 299.9999;
         char teaGreade = 'A';
         bool isTeaReady = false;
-
         cout<<priceOfTea<<endl;
 
 
