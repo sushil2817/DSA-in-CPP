@@ -28,11 +28,15 @@ Node* createTree(){
     Node* root = new Node(data);
     
     // strp:2 left sub tree
+    
     // cout<<"left of node: "<<root->data<<endl;
+    
     root->left = createTree();
 
     // strp:3 right sub tree
+    
     // cout<<"right of node: "<<root->data<<endl;
+    
     root->right = createTree();
 
     return root;
