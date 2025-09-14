@@ -7,24 +7,34 @@ class Stack{
     public:
     
     int *arr;
+    
     int size;
+    
     int top1;
+    
     int top2;
 
     Stack(int size){
+    
         arr = new int[size];
+    
         this->size = size;
         top1 = -1;
         top2 = size;
+    
     }
 
     void push1(int data){
+    
         if(top2 - top1 == 1){
             // no space avaliable
             cout<<"Stack1 is overflow"<<endl;
         }else{
+    
             top2++;
+    
             arr[top1] = data;
+    
         }
     }
 
