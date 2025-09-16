@@ -42,6 +42,50 @@ Node* createTree(){
     return root;
 }
 
+void preOrder(Node* root){
+    // base case
+    if(root == NULL){
+        return;
+    }
+    // N L R
+    // N
+    cout<<root->data<<" ";
+    // L
+    preOrder(root->left);
+    // R
+    preOrder(root->right);
+}
+
+void inOrder(Node* root){
+    // LNR
+    // base case
+    if(root == NULL){
+        return;
+    }
+    // L N R
+    // L
+    inOrder(root->left);
+    // N
+    cout<<root->data<<" ";
+    // R
+    inOrder(root->right);
+}
+
+void postOrder(Node* root){
+    //L R N
+    // base case
+    if(root == NULL){
+        return;
+    }
+
+    // L
+    postOrder(root->left);
+    // R
+    postOrder(root->right);
+    // N
+    cout<<root->data<<" "; 
+}
+
 
 int main(){
 
