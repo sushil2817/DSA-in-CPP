@@ -77,7 +77,6 @@ void postOrder(Node* root){
     if(root == NULL){
         return;
     }
-
     // L
     postOrder(root->left);
     // R
@@ -90,7 +89,14 @@ void postOrder(Node* root){
 int main(){
 
     Node* root = createTree();
-    cout<<root->data<<endl;
+    // cout<<root->data<<endl;
+    cout<<"Printing Preorder"<<endl;
+    preOrder(root);
+    cout<<"Printing Postorder"<<endl;
+    postOrder(root);
+    cout<<"Printing InOrder"<<endl;
+    inOrder(root);
+
 
 return 0;
 }
