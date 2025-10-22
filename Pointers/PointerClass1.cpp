@@ -21,7 +21,9 @@ int main(){
     cout<<&a<<endl;
     cout<<p<<endl;
     p=p+1;
+
     cout<<p<<endl;
+    
     cout<<*p<<endl;
 
     int arr[5] = {10,20,30,40,50};
