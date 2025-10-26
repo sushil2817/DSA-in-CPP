@@ -6,11 +6,14 @@ public:
     int data;
     Node* left;
     Node* right;
-
     Node(int val) {
+
         this->data = val;
+        
         this->left = NULL;
+        
         this->right = NULL;
+
     }
 };
 
