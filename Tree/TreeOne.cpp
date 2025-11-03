@@ -9,9 +9,9 @@ public:
     Node(int val) {
 
         this->data = val;
-        
+
         this->left = NULL;
-        
+
         this->right = NULL;
 
     }
@@ -88,9 +88,7 @@ void postOrder(Node* root) {
     cout << root->data << " ";
 }
 
-
 int main() {
-
     Node* root = createTree();
     // cout<<root->data<<endl;
     cout << "Printing Preorder" << endl;
@@ -99,7 +97,5 @@ int main() {
     postOrder(root);
     cout << "Printing InOrder" << endl;
     inOrder(root);
-
-
     return 0;
 }
