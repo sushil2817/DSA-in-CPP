@@ -3,6 +3,7 @@ using namespace std;
 int firstOcc(int arr[], int size, int key){
     int s = 0;
     int e = size-1;
+    cout<<"End in first Occ "<<e<<endl;
     int mid = s+(e-s)/2;
     int ans  = -1;
     while(s<=e){
@@ -22,6 +23,7 @@ int firstOcc(int arr[], int size, int key){
 int LastOcc(int arr[], int size, int key){
     int s = 0;
     int e = size-1;
+    cout<<"end in last Occ "<<e<<endl;
     int mid = s+(e-s)/2;
     int ans  = -1;
     while(s<=e){
@@ -47,5 +49,6 @@ int main(){
     int ans1 = LastOcc(arr,size,3);
     cout<<"first Occ of 3 is "<<ans<<endl;
     cout<<"last Occ of 3 is "<<ans1<<endl;
+    cout<<"Total no of Occ "<<(ans1-ans+1)<<endl;
 return 0;
 }
