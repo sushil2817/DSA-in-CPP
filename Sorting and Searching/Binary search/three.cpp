@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-
 int foundPeakElement(int arr[], int size) {
 
     int s = 0, e = size - 1;
@@ -15,7 +14,6 @@ int foundPeakElement(int arr[], int size) {
         mid = s + (e - s) / 2;
     }
     return arr[s];
-
 }
 int main() {
     int arr[] = { 3,4,5,1 };
