@@ -16,7 +16,6 @@ int firstOcc(int arr[], int size, int key){
         }else{
             e = mid-1;
         }
-
         mid = s+(e-s)/2;
     }
 }
@@ -36,12 +35,10 @@ int LastOcc(int arr[], int size, int key){
         }else{
             e = mid-1;
         }
-
         mid = s+(e-s)/2;
     }
 }
 int main(){
-
     int arr[] = {1,2,3,3,3,3,3,3,3,3,3,3,3,3,5};
     int size =  sizeof(arr)/sizeof(arr[0]);
     cout<<size<<endl;
