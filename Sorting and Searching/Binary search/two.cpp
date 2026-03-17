@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int firstOcc(int arr[], int size, int key){
     int s = 0;
     int e = size-1;
@@ -19,6 +20,7 @@ int firstOcc(int arr[], int size, int key){
         mid = s+(e-s)/2;
     }
 }
+
 int LastOcc(int arr[], int size, int key){
     int s = 0;
     int e = size-1;
@@ -38,6 +40,7 @@ int LastOcc(int arr[], int size, int key){
         mid = s+(e-s)/2;
     }
 }
+
 int main(){
     int arr[] = {1,2,3,3,3,3,3,3,3,3,3,3,3,3,5};
     int size =  sizeof(arr)/sizeof(arr[0]);
