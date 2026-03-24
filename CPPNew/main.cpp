@@ -12,19 +12,23 @@ int main(){
     age=23;
     // mainuplation/ updation
 
-    age = 25;
+    // age = 25;
 
-    int count = 5;
-    
-    float share = 3.15;
+    // int count = 5;
 
-    char alphabet = 'z';
+    // float share = 3.15;
+    // char alphabet = 'z';
+    // double weight = 55.69887;
+    // bool isMale = true;
+    // bool isChild = 1;
 
-    double weight = 55.69887;
+    // int a = 12;
+    // cout<<(sizeof(a));
 
-    bool isMale = true;
-    bool isChild = 1;
 
+    {
+        int age = 12;
+    }
     
     
     return 0;
