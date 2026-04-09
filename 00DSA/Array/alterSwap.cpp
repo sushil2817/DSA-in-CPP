@@ -18,7 +18,6 @@ int main(){
             swap(arr[i],arr[i+1]);
         }
     }
-    printArr(arr,n);
-    
+    printArr(arr,n);    
 return 0;
 }
