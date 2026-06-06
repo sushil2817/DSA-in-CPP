@@ -8,11 +8,8 @@ int main(){
     while (n != 0){
 
             int rem = n%10;
-
             product = product*rem;
-
             sum =  sum + rem;
-            
             n=n/10;
         }
         cout<<product<<endl;
