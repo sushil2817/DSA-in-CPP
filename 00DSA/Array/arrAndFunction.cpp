@@ -7,7 +7,6 @@ void print(int arr[], int size){
     }
     cout<<endl;
 }
-
 int inc(int crr[]){
     crr[0] = crr[0]+10;
     cout<<"outside main"<<endl;
