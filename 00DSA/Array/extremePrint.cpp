@@ -2,10 +2,8 @@
 using namespace std;
 
 void extremePrint(int arr[],int size){
-
     int start = 0;
     int end = size-1;
-
     while(start <= end){
         cout<<arr[start]<<" ";
         cout<<arr[end]<<" ";
