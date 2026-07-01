@@ -2,9 +2,7 @@
 #include<vector>
 using namespace std;
 int main(){
-
     vector<int>arr;
-    
     // cout<<sizeof(arr)/sizeof(int)<<endl;
     cout<<arr.size()<<endl;
     cout<<arr.capacity()<<endl;
@@ -20,7 +18,5 @@ int main(){
         cout<<brr[i]<<endl;
     }
     vector<int>crr{1,2,3};
-
-
 return 0;
 }
