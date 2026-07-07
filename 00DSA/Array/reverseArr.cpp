@@ -2,11 +2,15 @@
 using namespace std;
 
 void printArr(int arr[], int size){
+
     for(int i=0;i<size;i++){
         cout<<arr[i]<<" ";
     }
+
 }
+
 void reverseArr(int arr[],int size){
+
     int start = 0;
     int end = size-1;
     while (start < end)
@@ -17,7 +21,9 @@ void reverseArr(int arr[],int size){
     
     }
     printArr(arr,size);
+
 }
+
 
 int main(){
 
@@ -26,4 +32,5 @@ int main(){
     reverseArr(arr,size);
 
 return 0;
+
 }
