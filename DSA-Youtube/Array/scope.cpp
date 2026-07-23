@@ -3,7 +3,6 @@ using namespace std;
 
 void update(int arr[], int n){
     cout<<endl<<"Inisde the function"<<endl;
-
     arr[0] = 120;
     // printing the array
     for(int i=0;i<3;i++){
@@ -12,14 +11,15 @@ void update(int arr[], int n){
     cout<<endl;
 }
 
+
 void sumArr(int arr[], int size){
     int sum = 0;
     for(int i=0;i<size;i++){
         sum += arr[i];
     }
-
     cout<<"Value of sum is: "<<sum<<endl;
 }
+
 
 int main(){
 
