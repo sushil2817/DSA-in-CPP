@@ -4,7 +4,6 @@ using namespace std;
 
 int countSetBit(int n)
 {
-
     int count = 0;
     while (n > 0)
     {
@@ -52,7 +51,6 @@ int bruteForce(vector<int> &nums)
     {
         int lsum = 0;
         int rsum = 0;
-
         for (int j = 0; j < i; j++)
         {
             lsum += nums[j];
@@ -79,16 +77,14 @@ int bruteForceM2PrefixSum(vector<int>& nums){
         rsum[i] = rsum[i+1]+nums[i+1]; 
     }
     // check krte hai
-
     for(int i=0;i<nums.size();i++){
         if(lsum[i]==rsum[i]) return i;
     }
-     return -1; 
+        return -1; 
 }
 
 int main()
 {
-
     // int arr[] = {1,7,3,6,5,6};
     vector<int> arr;
     arr.push_back(1);
@@ -108,16 +104,14 @@ int main()
     // cout << bruteForceM2PrefixSum(arr);
     //    int n ;
     //    cin>>n;
-       int setBitCount = countSetBit(13);
+        int setBitCount = countSetBit(13);
     //    printDigit(n);
 
-       cout<<setBitCount<<endl;
+        cout<<setBitCount<<endl;
 
     // cout<<setBits(n);
-   
 
 //    int n = 6;
-   
 //     int count = 0;
 //    while(n>0){
 //     if((n&1)==1){
@@ -126,7 +120,6 @@ int main()
 //     n =n>>1;
 //    }
 //    cout<<count;
-
 
     return 0;
 }
