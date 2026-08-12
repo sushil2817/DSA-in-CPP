@@ -2,7 +2,6 @@
 #include<vector>
 using namespace std;
 
-
 int findUnique(vector<int>arr){
     int ans = 0;
     for(int i=0;i<arr.size();i++){
@@ -10,7 +9,6 @@ int findUnique(vector<int>arr){
     }
     return ans;
 }
-
 int main(){
     int n;
     cout<<"Enter the size of array "<<endl;

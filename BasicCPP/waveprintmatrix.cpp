@@ -2,33 +2,34 @@
 #include<vector>
 using namespace std;
 
-void wavePrintMatrix(vector<vector<int>>v){
+void wavePrintMatrix(vector<vector<int>>v) {
     int m = v.size();
-    cout<<m<<endl;
+    cout << m << endl;
     int n = v[0].size();
-    cout<<n<<endl;
-    for(int startCol = 0;startCol<n;startCol++){
-    //   even no of col -> Top to bottom
-         if((startCol & 1)==0){
-            for(int i=0;i<m;i++){
-                cout<<v[i][startCol]<<" ";
+    cout << n << endl;
+    for (int startCol = 0;startCol < n;startCol++) {
+        //   even no of col -> Top to bottom
+        if ((startCol & 1) == 0) {
+            for (int i = 0;i < m;i++) {
+                cout << v[i][startCol] << " ";
             }
-         }else{
+        }
+        else {
             // odd no of col -> bottome to top
-            for( int i = m-1;i>=0;i--){
-                 cout<<v[i][startCol]<<" ";
+            for (int i = m - 1;i >= 0;i--) {
+                cout << v[i][startCol] << " ";
             }
-         }
+        }
     }
 }
 
-int main(){
+int main() {
 
-      vector<vector<int>>v{
+    vector<vector<int>>v{
         {1,2,3,4},{5,6,7,8},{9,10,11,12}
-      };
+    };
 
-      wavePrintMatrix(v);
+    wavePrintMatrix(v);
 
 
     return 0;

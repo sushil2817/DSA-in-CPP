@@ -14,13 +14,10 @@ int findDuplicate (int arr[], int size){
 }
 
 int main(){
-
     // int arr[] = {4,2,1,3,1};
     int arr[] = {6,3,1,5,3,4,2};
     int size = sizeof(arr)/sizeof(arr[0]);
-
     cout<<"duplication number is "<<findDuplicate(arr,size)<<endl;
-
     for(int i=0;i<size; i++){
         cout<<arr[i]<<" ";
     }
