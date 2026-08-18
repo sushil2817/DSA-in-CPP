@@ -7,7 +7,6 @@ void printArr(int arr[],int size){
     }
     cout<<endl;
 }
-
 int main(){
     int arr[5] = {1,3,2,7,11};
     int n = sizeof(arr)/sizeof(arr[0]);
