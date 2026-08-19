@@ -15,7 +15,7 @@ int main(){
     //         }
     //     }
     // }
-    
+    cout<<"before function called";
     for(int i=0;i<9;i++){
         for(int j=i+1;j<7;j++){
             if(arr[i]+arr[j]==9){
@@ -23,6 +23,7 @@ int main(){
             }
         }
     }
+    cout<<"function called";
 
 return 0;
 }
