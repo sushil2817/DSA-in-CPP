@@ -22,5 +22,6 @@ int main() {
     cout << *p << endl;
     int arr[5] = { 10,20,30,40,50 };
     arr = arr + 1; // why
+    cout<<arr<<endl;
     return 0;
 }
