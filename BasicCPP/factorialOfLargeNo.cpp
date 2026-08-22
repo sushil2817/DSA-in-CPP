@@ -4,8 +4,6 @@
 using namespace std;
 
 vector<int> factorial(int N){
-     // code here
-        
         vector<int>ans;
         ans.push_back(1);
         int carry = 0;
@@ -22,7 +20,6 @@ vector<int> factorial(int N){
             }
             // carry = 0;
         }
-        
         // for(int e: ans){
         //     cout<<e<<" ";
         // }
@@ -30,7 +27,6 @@ vector<int> factorial(int N){
         return ans;
         
     }
-
  int main(){
 
 
