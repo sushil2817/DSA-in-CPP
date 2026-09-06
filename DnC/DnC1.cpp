@@ -18,7 +18,6 @@
 //         left[k] = arr[k];
 //         k++;
 //     }
-      
 //     //   copy values from original array to right array
 //     k = mid+1;
 //     for(int i=0;i<lenRight;i++){
@@ -46,32 +45,24 @@
 //             rightIndex++;
 //         }
 //     }
-
 //     // 2 more case
 //     // 1 case -> left array khtm ho gya lekin right array abhi bhi bache h
-
 //     // right array bacha hua h
-
 //     while(rightIndex < lenRight){
 //           arr[mainArrayIndex] = right[rightIndex];
 //             mainArrayIndex++;
 //             rightIndex++;
 //     }
 //     // 2 case -> right array khtm ho gya lekin left array me abhi bache h
-
 //     while(leftIndex < lenLeft){
 //             arr[mainArrayIndex] = left[leftIndex];
 //             mainArrayIndex++;
 //             leftIndex++;
 //     }
-
-
 //    // 1 more step
 //    delete[] left;
 //    delete[] right;
 // }
-
-
 // void mergSort(int arr[], int s, int e){
 //     // base case
 //     if(s>e){
@@ -81,7 +72,6 @@
 //     if(s==e){
 //         return ;
 //     }
-
 //     // break
 //     int mid = (s+e)/2;
 //     // s-> mid left array
@@ -90,35 +80,26 @@
 
 //     // left and right array ko sort karwao
 //     // recursion call for left array
-
 //     mergSort(arr,s,mid);
 //     // recursion call for right array
 //     mergSort(arr,mid+1,e);
-
 //     // merge 2 sorted array
 //     merge(arr,s,e);
 // }
 //  int main(){
-
 //      int arr[] = {2,1,6,9,4,5};
 //      int size = 6;
 //      int s = 0;
 //      int e = size-1;
-
-        
 //       std::cout<<"Before Sorting : "<<endl;
 //      for(int i=0;i<size;i++){
 //         std:: cout<<arr[i]<<" ";
 //      }
 //      mergeSort(arr, s, e);
-     
 //      std::cout<<"after Sorting: "<<endl;
-
 //      for(int i=0;i<size;i++){
 //       std::cout<<arr[i]<<" ";
 //      }
-
-
 //     return 0;
 //  }
 
