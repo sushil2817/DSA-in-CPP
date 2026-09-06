@@ -1,22 +1,12 @@
 // 242 leetcode anagram
 
 // brute force
-
     sort(s.begin(),s.end());
     sort(t.begin(),t.end());
-
-
-      if(s==t){
+    if(s==t){
         return true;
-      }
-    
-
+    }
     return false;
-
-
-
-
-
 // 918
 class Solution {
 public:
