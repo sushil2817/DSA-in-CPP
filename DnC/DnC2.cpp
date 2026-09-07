@@ -1,11 +1,7 @@
 // by reference me string glt out put deti h
-
-
 #include<iostream>
 #include<vector>
 using namespace std;
-
-
 void printPermutation(string &str, int index){
     // base case
      if(index >= str.length()){
@@ -22,38 +18,33 @@ void printPermutation(string &str, int index){
     }
 
 }
-
 // a function that will handel all the below mentioned possibilities
 //  3 possibilty hai
         //-> path closed
         // out of bound
         // check is pos already visited  
 bool isSafe(int srcx, int srcy, int newx, int newy, int maze[][4], int row, int col, vector<vector<bool >> & visited){
-     if(
+    if(
      (newx>=0 && newx < row ) && (newy >=0 && newy< col) && 
      (maze[newx][newy] == 1) && 
        visited [newx][newy] == false
-     ){
+    ){
             return true;
-     }else{
+    }else{
         return false;
-     }
+    }
 }
 
 void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &output,vector<vector<bool>>&visited){
-
     //   base case
     // destination coordinates are[row-1], [col-1];
-
     if(srcx == row-1 && srcy == col-1 ){
         // reached destination
         cout<<output<<endl;
         return;
     }
     // 1case solve kro baki recurstion sambhal lega
-
     //  execute
-
     // up
     //  3 possibilty hai
         //-> path closed
@@ -61,7 +52,6 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
         // check is pos already visited  
         int newx = srcx-1;
         int newy = srcy;
-
         if(isSafe(srcx, srcy, newx ,newy, maze,row, col, visited)){
             //marked visited
             visited[newx][newy] = true;
@@ -71,7 +61,6 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
             // backtracking
             output.pop_back();
             visited[newx][newy] = false;
-
         }
 
     
@@ -121,7 +110,6 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
 
 
 int main(){
-
     int maze[4][4] = {
         {1,0,0,0},
         {1,1,0,0},
@@ -142,15 +130,8 @@ int main(){
         visited[srcx][srcy]=true;
         printAllPath(maze,row,col,srcx,srcy,output, visited);
     }
-
-    
-
-
 //    string str = "abc";
-
 //    int i=0;
 //    printPermutation(str,i);
-
-
     return 0;
 } 
