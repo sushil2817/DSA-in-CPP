@@ -34,7 +34,6 @@ bool isSafe(int srcx, int srcy, int newx, int newy, int maze[][4], int row, int 
         return false;
     }
 }
-
 void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &output,vector<vector<bool>>&visited){
     //   base case
     // destination coordinates are[row-1], [col-1];
@@ -62,8 +61,6 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
             output.pop_back();
             visited[newx][newy] = false;
         }
-
-    
     // right
       newx = srcx;
       newy = srcy+1;
@@ -81,7 +78,6 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
     // down
       newx = srcx+1;
       newy = srcy;
-
         if(isSafe(srcx, srcy, newx ,newy, maze,row, col, visited)){
             //marked visited
             visited[newx][newy] = true;
@@ -95,7 +91,6 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
     // left
      newx = srcx;
      newy = srcy-1;
-
         if(isSafe(srcx, srcy, newx ,newy, maze,row, col, visited)){
             //marked visited
             visited[newx][newy] = true;
@@ -107,8 +102,6 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
             visited[newx][newy] = false;
         }
 }
-
-
 int main(){
     int maze[4][4] = {
         {1,0,0,0},
