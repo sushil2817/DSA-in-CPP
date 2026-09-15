@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-
 int getPaintWays (int n, int k){
     // base case
     if(n==1) return k;
