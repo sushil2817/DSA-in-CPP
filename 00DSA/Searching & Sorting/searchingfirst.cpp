@@ -7,15 +7,16 @@ int binarySearch(int arr[], int size, int target){
     int e = size-1;
     int mid = s+(e-s)/2;
     cout<<"this is mid "<<mid<<endl;
-    while(s<e){
+    while(s<=e){
+        cout<<"this is mid inside function "<<mid<<endl;
         if(target == arr[mid] ){
             return mid;
         }
         if(target < arr[mid]){
-            e--;
+            e = mid-1;
         }
         if(target > arr[mid]){
-            s++;
+            s = mid+1;
         }
         mid = s+(e-s)/2;
     }
