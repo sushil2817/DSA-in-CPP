@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+
 int getPaintWays (int n, int k){
     // base case
     if(n==1) return k;
@@ -7,7 +8,8 @@ int getPaintWays (int n, int k){
      int ans = (k-1) * (getPaintWays(n-1,k)+getPaintWays(n-2,k));
         return ans;
 }
-    int main(){
+
+int main(){
         int n=3;
         int k=3;
         int ans = getPaintWays(n,k);
