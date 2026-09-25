@@ -107,122 +107,99 @@
 #include<iostream>
 using namespace std;
 
-void merge(int arr[], int s, int e){
-    int mid = (s+e)/2;
-
-    int lenLeft = mid-s+1;
-    int lenRight = e-mid;
-
+void merge(int arr[], int s, int e) {
+    int mid = (s + e) / 2;
+    int lenLeft = mid - s + 1;
+    int lenRight = e - mid;
     // create left and right array
-    int *left = new int[lenLeft];
-    int *right = new int[lenRight];
-
+    int* left = new int[lenLeft];
+    int* right = new int[lenRight];
     // copy values form origianl array to left array
 
     int k = s;
     // k->s strarting index of left array values in original arrays
-
-    for(int i=0;i<lenLeft;++i){
+    for (int i = 0;i < lenLeft;++i) {
         left[i] = arr[k];
         k++;
     }
-
-    k = mid+1;
+    k = mid + 1;
     // k->mid+1 starting arr of right array ka
-     for(int i=0; i<lenRight; ++i){
-         right[i] = arr[k];
-         k++;
-     }
-
+    for (int i = 0; i < lenRight; ++i) {
+        right[i] = arr[k];
+        k++;
+    }
     //  actual merge logic here
-
     // left array is already sorted
     // right array is already sorted
-
-     int leftIndex = 0;
-     int rightIndex = 0;
+    int leftIndex = 0;
+    int rightIndex = 0;
     //  main arr ka index 
     // galti hogi
-     int mainArrayIndex = s;
+    int mainArrayIndex = s;
 
-     
-      while(leftIndex < lenLeft && rightIndex < lenRight ){
-        if(left[leftIndex]<right[rightIndex]){
+    while (leftIndex < lenLeft && rightIndex < lenRight) {
+        if (left[leftIndex] < right[rightIndex]) {
             arr[mainArrayIndex] = left[leftIndex];
             mainArrayIndex++;
             leftIndex++;
         }
-        else{
+        else {
             arr[mainArrayIndex] = right[rightIndex];
             mainArrayIndex++;
             rightIndex++;
         }
-      }
-
-
+    }
     //   2more case
     // 1 case -> left array exhaust but right array me element bache ho 
-       while(rightIndex<lenRight){
-            arr[mainArrayIndex] = right[rightIndex];
-            mainArrayIndex++;
-            rightIndex++;
-       }
+    while (rightIndex < lenRight) {
+        arr[mainArrayIndex] = right[rightIndex];
+        mainArrayIndex++;
+        rightIndex++;
+    }
     // 2 case -> right array exhaust but left array me element bache ho
-
-       while(leftIndex<lenLeft){
-             arr[mainArrayIndex] = left[leftIndex];
-            mainArrayIndex++;
-            leftIndex++;
-       }
-
+    while (leftIndex < lenLeft) {
+        arr[mainArrayIndex] = left[leftIndex];
+        mainArrayIndex++;
+        leftIndex++;
+    }
     //    delete
-
     delete[] left;
     delete[] right;
 
 }
 
 void mergeSort(int arr[], int s, int e) {
-	//base case
-	if(s >= e) {
-		return;
-	}
-
-	//break
-	int mid = (s+e)/2;
-	//recusive call for left array
-	mergeSort(arr,s, mid);
-	//recusive call for right array
-	mergeSort(arr, mid+1, e);
-	//merge 2 sorted arrays
-	merge(arr, s, e);
+    //base case
+    if (s >= e) {
+        return;
+    }
+    //break
+    int mid = (s + e) / 2;
+    //recusive call for left array
+    mergeSort(arr, s, mid);
+    //recusive call for right array
+    mergeSort(arr, mid + 1, e);
+    //merge 2 sorted arrays
+    merge(arr, s, e);
 }
 
-int main(){
- 
-    
-     int arr[] = {2,1,6,9,4,5};
-     int size = 6;
-     int s = 0;
-     int e = size-1 ;
+int main() {
 
+    int arr[] = { 2,1,6,9,4,5 };
+    int size = 6;
+    int s = 0;
+    int e = size - 1;
 
-     cout<<"Before merge sort"<<endl;
-
-     for(int i=0;i<size;++i){
-        cout<<arr[i]<<" ";
-     }
-     cout<<endl;
-     
-     mergeSort(arr,s,e);
-
-     cout<<"After merge sort"<<endl;
-
-     for(int i=0;i<size;++i){
-        cout<<arr[i]<<" ";
-     }
-     cout<<endl;
-
-
+    cout << "Before merge sort" << endl;
+    for (int i = 0;i < size;++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    mergeSort(arr, s, e);
+    cout << "After merge sort" << endl;
+    for (int i = 0;i < size;++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
     return 0;
 }
