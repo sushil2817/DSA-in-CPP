@@ -4,10 +4,10 @@
 using namespace std;
 void printPermutation(string &str, int index){
     // base case
-     if(index >= str.length()){
+    if(index >= str.length()){
         cout<<str<<" ";
         return;
-     }
+    }
     //  execute
     for(int j=index;j<str.length();j++){
         swap(str[index],str[j]);
@@ -25,9 +25,9 @@ void printPermutation(string &str, int index){
         // check is pos already visited  
 bool isSafe(int srcx, int srcy, int newx, int newy, int maze[][4], int row, int col, vector<vector<bool >> & visited){
     if(
-     (newx>=0 && newx < row ) && (newy >=0 && newy< col) && 
-     (maze[newx][newy] == 1) && 
-       visited [newx][newy] == false
+    (newx>=0 && newx < row ) && (newy >=0 && newy< col) && 
+    (maze[newx][newy] == 1) && 
+        visited [newx][newy] == false
     ){
             return true;
     }else{
@@ -62,8 +62,8 @@ void printAllPath(int maze[][4], int row, int col, int srcx, int srcy,string  &o
             visited[newx][newy] = false;
         }
     // right
-      newx = srcx;
-      newy = srcy+1;
+    newx = srcx;
+    newy = srcy+1;
 
         if(isSafe(srcx, srcy, newx ,newy, maze,row, col, visited)){
             //marked visited
