@@ -15,9 +15,6 @@ int solve(string& a, string& b, int i, int j){
             return  a.length()-i;
         }
 
-
-
-
         int ans = 0;
         if(a[i]==b[j]){
             // match
@@ -40,21 +37,15 @@ int solve(string& a, string& b, int i, int j){
 }
 
 int minDistance(string word1, string word2){
-
     int i=0,j=0;
-
     int ans = solve(word1,word2,i,j);
     return ans;
 }
 
 
 int main(){
-
     string word1 = "horse";
     string word2 = "ros";
-
     cout<<minDistance(word1,word2);
-    
-    
     return 0;
 }
