@@ -10,7 +10,6 @@ int lengthOfString(char ch[], int size)
 
    //   int count = 0;
    int i = 0;
-
    while (ch[i] != '\0')
    {
       // count++;
@@ -18,7 +17,6 @@ int lengthOfString(char ch[], int size)
    }
    return i;
    //  int count = 0;
-
    //  for(int i=0;i<size;i++){
    //    if(ch[i]=='\0'){
    //       // break
@@ -31,7 +29,6 @@ int lengthOfString(char ch[], int size)
 }
 
 // char arr by default by reference pass hote h same to same int array
-
 void reverseString(char ch[], int len)
 {
    int i = 0;
@@ -43,12 +40,9 @@ void reverseString(char ch[], int len)
       j--;
    }
 }
-
 void upperCase(char ch[], int len)
 {
-
    int i = 0;
-
    while (ch[i] != '\0')
    {
       // check if lower case then convert to lower case
@@ -71,27 +65,26 @@ void replaceAt(char ch[])
       }
       i++;
    }
-
    // T.C.=> O(l) l is length of string
 }
 
 bool isPalindrom(char ch[],int n){
    //   n -> length of string
-     int i=0;
-     int j=n-1;
+   int i=0;
+   int j=n-1;
 
-     while(i<=j){
+   while(i<=j){
       if(ch[i] == ch[j]){
          ++i;
          --j;
-        }
-        else{
+      }
+      else{
          // not equal
-           return false;
-        }
-     }
+         return false;
+      }
+   }
 
-     return true;
+   return true;
 }
 
 int main()
