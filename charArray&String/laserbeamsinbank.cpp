@@ -2,9 +2,9 @@
 
 #include <iostream>
 using namespace std;
-int main()
 
-    class Solution
+
+class Solution
 {
 public:
     int countDevices(string &binary)
@@ -41,7 +41,7 @@ public:
 };
 
 // T.C. O(n^2);
-{
 
+int main(){
     return 0;
 }
