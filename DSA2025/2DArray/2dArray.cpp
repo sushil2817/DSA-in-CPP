@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-
 void print2dArray(int arr[][3], int row, int col){
     for(int i=0;i<row;i++){
         for(int j=0;j<col;j++){
@@ -9,7 +8,6 @@ void print2dArray(int arr[][3], int row, int col){
         cout<<endl;
     }
 }
-
 void colWisePrint(int arr[][4],int row,int col){
     for(int i=0;i<col;i++){
         for(int j=0;j<row;j++){
