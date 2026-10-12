@@ -11,7 +11,6 @@ bool findTarget(int arr[][4],int row,int col,int target){
     return false;
 }
 int main(){
-
     int arr[3][4] = { {1,2,3,4},
                     {5,6,7,8},
                     {9,10,11,12}
@@ -19,14 +18,11 @@ int main(){
     int row = 3;
     int col = 4;
     int target = 110;
-
     bool istrue = findTarget(arr,row,col,target);
-
     if(istrue){
         cout<<"Target Found"<<endl;
     }else{
         cout<<"Target not found"<<endl;
     }
-
 return 0;
 } 
