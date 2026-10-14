@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-
 // void transposeMatrix(int arr[][3], int row, int col){
 //         for(int i=0;i<row;i++){
 //             for(int j=0;j<col;j++){
@@ -8,7 +7,6 @@ using namespace std;
 //             }
 //         }
 // }
-
 void transpose(int arr[][3], int row, int col){
     for(int i=0;i<row;i++){
         for(int j=i;j<col;j++){
@@ -34,6 +32,5 @@ int main(){
         }
         cout<<endl;
     }
-
 return 0; 
 }
