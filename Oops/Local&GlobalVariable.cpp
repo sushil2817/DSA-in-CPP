@@ -8,16 +8,15 @@ void fun(){
     ::x = 40;
     cout<<"inside fun: "<<::x<<endl;
 }
+
 int main(){
     int a;
     cout<<"A: "<<a<<endl;
-      
-      x= 4; //global x
-      int x = 20;// local to main fnx
+    x= 4; //global x
+    int x = 20;// local to main fnx
     //   cout<<x<<endl;
     //   want to access global variable so use ::
     // cout<<::x<<endl;
-
     {
         int x = 50;
         {
@@ -29,6 +28,5 @@ int main(){
 
     }
     //  fun();
-
     return 0;
 }
