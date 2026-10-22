@@ -12,7 +12,6 @@ void reverseArray(int arr[],int size){
     //         right--;
     //     }
     // }
-
     for(int left=0,right = size-1;   left<=right;    right--,left++){
         swap(arr[left],arr[right]);
     }
@@ -25,14 +24,11 @@ void printingArray(int arr[], int size){
     }
     cout<<endl;
 }
-int main(){
 
+int main(){
     int arr[] = {10,20,30,40,50,60,70};
     int size = 7;
-
     reverseArray(arr,size);
-
     printingArray(arr,size);
-
 return 0;
 }

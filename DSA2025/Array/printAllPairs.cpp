@@ -8,7 +8,6 @@ void printAllPairs(int arr[],int size){
         }
     }
 }
-
 int main(){
     int arr[] = {10,20,30};
     int size = 3;
