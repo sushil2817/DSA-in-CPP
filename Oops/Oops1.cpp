@@ -17,7 +17,7 @@ using namespace std;
 
 class Animal{
  
- private:
+private:
   int weight;
 
   public:
@@ -27,15 +27,15 @@ class Animal{
 
 //default Constuctor
   Animal(){
-   this->weight = 0;
-   this->age = 0;
-   this->type = "";
-   cout<<"constructor called"<<endl;
+    this->weight = 0;
+    this->age = 0;
+    this->type = "";
+    cout<<"constructor called"<<endl;
   }
 
 
 //   Perameterised Constructor
-   
+  
     Animal(int age ){
       this->age = age;
       cout<<"Perametrised Constructor Called"<<endl;
@@ -68,26 +68,26 @@ class Animal{
 
 //   behaviour
   void eat(){
-     cout<<"eating"<<endl;
+    cout<<"eating"<<endl;
   }
-   void sleep(){
+    void sleep(){
       cout<<"sleeping"<<endl;
-   }
+  }
 
-   int getWeight(){
-       return weight;
-   }
-   int setWeight(int weight){
+  int getWeight(){
+      return weight;
+  }
+  int setWeight(int weight){
       this->weight = weight;
       // this points to current object
-   }
-   ~Animal(){
+  }
+  ~Animal(){
       cout<<"I am inside destructor"<<endl;
-   }
+  }
 };
 
 
- int main(){
+int main(){
 
     // Object Creation
 
@@ -98,25 +98,20 @@ class Animal{
    //  ramesh.age = 12;
    //  ramesh.name = "Ramesh";
    //  cout<<"Age of ramesh is: "<<ramesh.age<<endl;
-   //  cout<<"Name of ramesh is: "<<ramesh.name<<endl;
-     
+   //  cout<<"Name of ramesh is: "<<ramesh.name<<endl;     
    //    ramesh.eat();
    //    ramesh.eat();
     
    //   ramesh.setWeight(101);
    //   cout<<ramesh.getWeight();
-
          // Destructor
-
-         Animal a;
-         a.age = 5;
+        Animal a;
+        a.age = 5;
       
       
-
       
-
     // Dynamic memory
-       
+    
       //  Animal* suresh = new Animal(100);
    //     (*suresh).age = 15;
    //     (*suresh).name = "Suresh";
@@ -126,14 +121,14 @@ class Animal{
    //     suresh->eat();
    //     suresh->sleep();
 
-   Animal*b = new Animal();
-   b->age = 12;
+  Animal*b = new Animal();
+  b->age = 12;
 
    // manually des called
 
-   delete b;
+  delete b;
 
 
-       
-     return 0;
- }
+      
+    return 0;
+}
