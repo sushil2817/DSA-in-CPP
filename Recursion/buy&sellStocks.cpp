@@ -6,13 +6,11 @@ public:
     {
         // base
         if(i== prices.size())return ;
-
         // ek case me solve krunga
         if(prices[i] < minPrice){
             minPrice = prices[i];
         }
         int todayProfit = prices[i] - minPrice;
-
         if(todayProfit > maxProfit){
             maxProfit = todayProfit;
         }

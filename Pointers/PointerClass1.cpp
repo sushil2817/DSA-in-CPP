@@ -12,7 +12,6 @@ int main() {
     // cout<<"ptr address: "<<&ptr<<endl;
     // int* ptr = nullptr;
     // cout<<*ptr<<endl;
-    
     int a = 5;
     int* p = &a;
     cout << &a << endl;
