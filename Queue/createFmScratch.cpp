@@ -9,21 +9,17 @@ using namespace std;
 // front
 
 class Queue{
-
     public:
-
     int* arr;
     int size;
     int front;
     int rear;
-
     Queue(int size){
         arr = new int[size];
         this->size = size;
         front = -1;
         rear = -1;
     }
-
     void push(int val){
         // check full
         if(rear == size-1){
@@ -40,7 +36,6 @@ class Queue{
             arr[rear] = val;
         }
     }
-
     void pop(){
         // underflow
         if(front == -1 && rear == -1){
@@ -64,7 +59,6 @@ class Queue{
             return false;
         }
     }
-
     int getSize(){
         // bhool jata hu
         if(front == -1 && rear == -1){
@@ -73,7 +67,6 @@ class Queue{
         return rear-front+1;
         }
     }
-
     int getFront(){
         if(front == -1){
             cout<<"No element in queue, cannot give front element"<<endl;
@@ -83,7 +76,6 @@ class Queue{
         }
         
     }
-
     int getRear(){
         if(rear == -1){
             cout<<"No element in queue, cannot give rear element"<<endl;
@@ -91,7 +83,6 @@ class Queue{
             return arr[rear];
         }
     }
-
     void print(){
         cout<<"Printing Queue: ";
         for(int i=0;i<size;i++){
@@ -101,7 +92,6 @@ class Queue{
     }
 
 };
-
 int main(){
     //creation
     Queue q(5);
@@ -116,15 +106,11 @@ int main(){
     q.print();
     q.push(50);
     q.print();
-    
     cout<<"Size of Queue "<<q.getSize()<<endl;
-
     q.pop();
     q.print();
     cout<<"Size of Queue "<<q.getSize()<<endl;
-
     cout<<"Queue is empty or not: "<<q.isEmpty()<<endl;
-
     q.push(100);
     q.print();
     q.pop();
@@ -135,7 +121,6 @@ int main(){
     q.push(500);
     q.push(600);
     q.print();
-
     cout<<"Rear element: "<<q.getRear()<<endl;
     cout<<"Front element: "<<q.getFront()<<endl;
 return 0;
