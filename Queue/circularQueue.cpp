@@ -4,13 +4,11 @@ using namespace std;
 
 class Cqueue
 {
-
 public:
     int *arr;
     int size;
     int front;
     int rear;
-
     Cqueue(int size)
     {
         arr = new int[size];
@@ -18,7 +16,6 @@ public:
         front = -1;
         rear = -1;
     }
-
     // push
     void push(int val)
     {
@@ -26,7 +23,6 @@ public:
         // empty
         // circular
         // normal
-
         //  bhut glti hoti h yha
         if ((front == 0 && rear == size - 1) || (rear == front - 1)) // bhool jaoge bar bar
         {
@@ -49,9 +45,7 @@ public:
             arr[rear] = val;
         }
     }
-
     // pop
-
     void pop()
     {
         // underflow
@@ -79,7 +73,6 @@ public:
             front++;
         }
     }
-
     void print()
     {
         cout << "Printing Queue: ";
@@ -93,10 +86,8 @@ public:
 
 int main()
 {
-
     Cqueue q(5);
     q.print();
-
     q.push(10);
     q.print();
     q.push(20);
@@ -109,7 +100,6 @@ int main()
     q.print();
     q.push(60);
     q.print();
-
     q.pop();
     q.pop();
     q.pop();
@@ -122,15 +112,12 @@ int main()
     q.print();
     q.push(130);
     q.print();
-
     q.pop();
     q.pop();
     q.pop();
     q.pop();
     q.pop();
     q.pop();
-
     q.print();
-
     return 0;
 }
