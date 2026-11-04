@@ -3,13 +3,11 @@
 using namespace std;
 class Deque
 {
-
 public:
     int *arr;
     int size;
     int front;
     int rear;
-
     Deque(int size)
     {
         arr = new int[size];
@@ -17,7 +15,6 @@ public:
         front = -1;
         rear = -1;
     }
-
     void pushFront(int val)
     {
         // overflow
@@ -43,7 +40,6 @@ public:
             arr[front] = val;
         }
     }
-
     void pushBack(int val)
     {
         // overflow
@@ -72,7 +68,6 @@ public:
             arr[rear] = val;
         }
     }
-
     void popFront()
     {
         // underflow
@@ -130,6 +125,5 @@ public:
 
 int main()
 {
-
     return 0;
 }
