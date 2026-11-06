@@ -8,6 +8,7 @@ int findUnique(int arr[], int size) {
     }
     return ans;
 }
+
 int main() {
     int arr[] = { 3,7,2,2,7,3,4 };
     int size = sizeof(arr) / sizeof(arr[0]);

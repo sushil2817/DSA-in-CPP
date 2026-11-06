@@ -22,19 +22,15 @@ void sumArr(int arr[], int size){
 
 
 int main(){
-
     int arr[3] = {1,2,3};
     sumArr(arr,3);
     update(arr,3);
     sumArr(arr,3);
-
     cout<<"printing in main funcition"<<endl;
     // printing arr
     for(int i=0;i<3;i++){
         cout<<arr[i]<<" ";
     }
     cout<<endl;
-
-
 return 0;
 }

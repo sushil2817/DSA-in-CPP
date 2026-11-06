@@ -15,7 +15,6 @@
 //     }
 //     cout<<endl;
 // }
-
 // int main(){
 //     int arr[15];
 //     // cout<<"Value at 14 index "<<arr[14]<<endl;
@@ -37,7 +36,6 @@
 #include<iostream>
 #include <climits>
 using namespace std;
-
 int getMax(int num[], int size) {
     int max = INT_MIN;
     for (int i = 0;i < size;i++) {
