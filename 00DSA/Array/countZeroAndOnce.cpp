@@ -14,7 +14,6 @@ int countZeroAndOnce(int arr[], int size){
     }
     cout<<"Zero "<<Zero<<endl;
     cout<<"Once "<<Once<<endl;
-
 }
 
 int main(){

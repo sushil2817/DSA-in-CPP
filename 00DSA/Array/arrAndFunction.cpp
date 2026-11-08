@@ -7,11 +7,13 @@ void print(int arr[], int size){
     }
     cout<<endl;
 }
+
 int inc(int crr[]){
     crr[0] = crr[0]+10;
     cout<<"outside main"<<endl;
     print(crr,2);
 }
+
 int main(){
     int arr[] = {5,6};
     int size = 2;
