@@ -22,7 +22,6 @@ void minNumber(int arr[],int size){
     cout<<"This is Min Number "<<maxNumber<<endl;
 }
 
-
 int main(){
     int arr[] = {1,19,-1700,6,8,9,100,101,124};
     int size = sizeof(arr)/sizeof(arr[0]);

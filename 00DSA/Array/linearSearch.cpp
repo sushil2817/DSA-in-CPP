@@ -11,7 +11,6 @@ bool find(int arr[], int size, int key){
 }
 
 int main(){
-
     int arr[5] = {1,2,3,5,7};
     int size = sizeof(arr)/sizeof(arr[0]);
     cout<<"Enter the key to find"<<endl;
