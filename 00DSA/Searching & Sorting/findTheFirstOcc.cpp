@@ -4,7 +4,6 @@
 using namespace std;
 
 int findFirstOcc(vector<int>v, int target){
-
     int start = 0;
     int end = v.size();
     int ans = -1;
@@ -25,15 +24,12 @@ int findFirstOcc(vector<int>v, int target){
 }
 
 int main() {
-
     vector<int>v{1,2,4,4,4,4,4,5,5,5,6,7,9};
-
     int found = findFirstOcc(v,5);
     if(found == -1){
         cout<<"Target is not found"<<endl;
     }else{
         cout<<"Target is found at "<<found<<endl;
     }
-
     return 0;
 }
