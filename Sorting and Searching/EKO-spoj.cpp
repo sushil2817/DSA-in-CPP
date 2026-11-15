@@ -6,13 +6,13 @@ using namespace std;
 
 
 bool isPossibleSolution(vector<long long int> trees, long long int m, long long int mid){
-       long long int woodCollected = 0;
-       for(int i=0;i<trees.size();i++){
+    long long int woodCollected = 0;
+    for(int i=0;i<trees.size();i++){
         if(trees[i] > mid){
         woodCollected += trees[i]-mid;
         }
-       }
-       return woodCollected >= m;
+    }
+    return woodCollected >= m;
 }
 
 
